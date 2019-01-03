@@ -1,0 +1,43 @@
+.intro{
+        h2{
+        margin: 0;
+        font-size: 2rem;
+        margin-bottom: 0rem;
+        font-weight: 900;
+        letter-spacing: 0.03rem;
+        }
+}
+.meta{
+  font-size: 1rem;
+  display: inline-block;
+  margin: 1.2rem 0;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  text-transform: uppercase;
+  a{
+    color:$color__black;
+    text-decoration:none;
+    &:hover{
+      color:$color__railred;
+    }
+  }
+}
+/* // kommt spater*/
+.button-play{
+  display:block;
+  width: 64px;
+  height: 64px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-32px;
+  margin-left:-32px;
+  background: url('../images/play.svg') no-repeat center center;
+  background-size: 100%;
+  opacity:1;
+  @include fade(0.2s);
+    &:hover{
+      opacity:0.5;
+      background-size: 96%;
+    }
+}

@@ -1,0 +1,40 @@
+// standard fading
+@mixin fade($fade) {
+-webkit-transition: all $fade;
+transition: all $fade;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin brightness($brightness) {
+ 	-webkit-filter: brightness($brightness); 
+          filter: brightness($brightness);
+        }
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transform-y ($transform-y) {
+-webkit-transform:translateY($transform-y);
+    -moz-transform:translateY($transform-y);
+    -ms-transform:translateY($transform-y);
+    -o-transform:translateY($transform-y);
+    transform:translateY($transform-y);
+}
+
+@mixin transform-x ($transform-x) {
+-webkit-transform:translateX($transform-x);
+    -moz-transform:translateX($transform-x);
+    -ms-transform:translateY($transform-x);
+    -o-transform:translateX($transform-x);
+    transform:translateX($transform-x);
+}

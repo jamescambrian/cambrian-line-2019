@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Cutive+MonoLora|Noto+Serif|Slabo+27px);
+// global fonts
+$font__sans-serif:'Noto Serif', serif;
+$font__title:'Noto Serif', serif;
+$font__serif:'lato', sans-serif;
+
+
+// BREAKPOINTS
+$bp-larger-than-mobile    : "min-width: 320px";
+$bp-larger-than-phablet   : "min-width: 550px";
+$bp-larger-than-tablet    : "min-width: 750px"; /*was 750*/
+$bp-larger-than-desktop   : "min-width: 1000px";
+$bp-larger-than-desktophd : "min-width: 1200px";
+
+// UNIVERSAL COLORS
+$color__background:rgba(255, 254, 249, 1);
+$color__black:rgba(35, 31, 32, 1);
+$color__black--80:rgba(35, 31, 32, 0.8);
+$color__black--60:rgba(35, 31, 32, 0.3);
+$color__railred:rgba(207, 74, 55, 1);
+$color__railred--dark:rgba(134, 18, 3, 1);
+$color__railblue:rgba(11,69,89,1);
+
+
+//color wrap on links
+$color__railred--seemore :rgba(250,255,244,1);
+$color__coral:rgba(255,127,81,1);
+$color__yellow:rgba(255,215,80,1);
+$color__deep-purple:rgba(68,20,111,1);
+$color__deep-purple--seemore: rgba(253,258,255,1);
+$color__deep-purple--dj: rgba(209,95,238,1);
+$color__white: rgba(255,255,255,1);
+
+
+$color-peng-highlight:#5146e0;
+
+
+
+
+/* BASIC STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+//  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+    
+}
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-family: $font__sans-serif;
+  color: $color__black; 
+  background:$color__background;
+  margin: 0;
+  padding:0;
+}
+  figure{
+    margin: 0;
+  }
+/* LISTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: none; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 0.75rem;font-family: $font__serif; font-weight:200; }
+
+/* CODE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+/* TABLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+/* SPACING
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+ font-size:11px;
+ width: 100%; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+

@@ -1,0 +1,132 @@
+//controls the scroller
+@mixin scroll-x-transition ($scroll-transition) {
+-webkit-transition: $scroll-transition;
+-moz-transition: $scroll-transition;
+transition: $scroll-transition;     
+}
+@mixin scroll-x-timing ($scroll-timing) {
+-webkit-transition-timing-function: $scroll-timing;
+-moz-transition-timing-function: $scroll-timing;
+transition-timing-function: $scroll-timing;
+}
+
+// light mini player
+
+
+#player__mini--light{
+    width:100%;
+    border: 1px solid $color__black;
+    overflow:auto;
+    @media (#{$bp-larger-than-mobile}) {padding:1.5rem 1.5rem 2rem 1.5rem;}
+    @media (#{$bp-larger-than-desktop}) {padding:2rem 2rem 2.5rem 2rem;}
+    box-sizing:border-box;
+    .audio-image{
+        position:relative;
+        width:100%;
+        height: auto;
+        margin-bottom:15px;
+        }
+    .player__cover{
+        width:100%;
+        z-index:1;
+        }
+    .player__buttons{
+        @media (#{$bp-larger-than-mobile}) {width:13%;}
+        @media (#{$bp-larger-than-desktop}) {width:6%;}
+        display: block;
+        overflow:auto;
+        float: left;
+        height: 18px;
+        position: relative;
+        overflow: hidden;
+        box-sizing:border-box;
+        padding:0;
+        span{padding:0;}
+        }
+    button#play{
+        background:url(../images/play__player--light.png) no-repeat;
+        margin-left: 2px;
+        }
+    button#pause{
+        background:url(../images/pause__player--light.png) no-repeat;
+        margin-left: 2px;
+        }
+    button#play,button#pause{
+        width:18px;
+        height:18px;
+        background-size: contain;
+        margin-right: 10%;
+        opacity:1;
+        border:0;
+        cursor: pointer;
+        padding:0;
+        margin-top:0px;
+        position:relative;
+        float: left;
+        &:hover{opacity: 0.8;}
+        }
+    //playlist controls
+    #player--playlist {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+
+        li {
+            font-family: $font__sans-serif;
+            color: $color__black;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.7rem;
+            padding:0;
+            line-height: 1.8rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            // @include scroll-x-transition(2.5s);
+            // @include scroll-x-timing(linear);
+                // &:hover{margin-left:-100%;}
+            }
+        }
+    //search seek
+    .playlist__container{
+    width: 85%;
+    float: left;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+    #tracker{
+        display: block;
+        width:100%;
+        float: left;
+        height: 10px;
+        position: relative;
+        }
+    #progressBar {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 10px;
+        background:$color__black;
+
+        }
+    #progress {
+        background:$color__railred;
+        height:10px;
+        display:block;
+        }
+    #duration{
+    position:absolute;
+    top:0;
+    right:10px;
+    padding:4px 8px;
+    background:#000;
+    }
+}
+
+
+

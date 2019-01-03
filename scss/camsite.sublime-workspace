@@ -1,0 +1,780 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"co",
+				"color__railred"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"b",
+				"background-size"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"doo",
+				"doorNumber"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"ra",
+				"rail-blue"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"sa",
+				"font-sans-serif"
+			],
+			[
+				"bla",
+				"black-80percent"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"rai",
+				"rail-red"
+			],
+			[
+				"c",
+				"cursor"
+			],
+			[
+				"rail",
+				"rail-blue"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"firs",
+				"first-child"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"l",
+				"letter-spacing"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"li",
+				"list-style"
+			],
+			[
+				"blck",
+				"black"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"MA",
+				"max-width"
+			],
+			[
+				"blac",
+				"black-80percent"
+			],
+			[
+				"blo",
+				"inline-block"
+			],
+			[
+				"radio",
+				"radio-list"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"border",
+				"border-box"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"con",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/releases.html",
+			"settings":
+			{
+				"buffer_size": 7381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 2320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "screen.scss",
+			"settings":
+			{
+				"buffer_size": 12138,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_base.scss",
+			"settings":
+			{
+				"buffer_size": 924,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/index.html",
+			"settings":
+			{
+				"buffer_size": 8243,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/css/screen.css",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/camsite.sublime-workspace",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/index.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/camsite.sublime-workspace",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/page-post.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/screen.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_wp-standards.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/_base.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_animations.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/_animations.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_unused.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_forms.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_buttons.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_reset.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/modules/_typography.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/_grid.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/css/typography.css",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/_breakpoints.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/assets/sass/_typography.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/index.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/sass/base.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/sass/modules/_reset.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/sass/modules/_reset.scss.css",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/sass/nav.scss",
+		"/Applications/MAMP/htdocs/BEM/assets/screen.scss",
+		"/Applications/MAMP/htdocs/BEM/static/css/screen.css",
+		"/Applications/MAMP/htdocs/BEM/assets/sass/_reset.scss",
+		"/Applications/MAMP/htdocs/BEM/index.html",
+		"/Applications/MAMP/htdocs/BEM/assets/style.scss",
+		"/Applications/MAMP/htdocs/app/README.md",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/header-advent.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/advent2015-single.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/header-blank.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/templates/advent-template.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/templates/advent-header.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/loop-blog-style-1.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/loop-blog-style-2.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/functions.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/single.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/templates/advent-single.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/css/advent/_fonts.scss",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/advent2015-template.php",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/templates/advent2015-template.php",
+		"/Users/jamesshaw/Documents/dh-docs/hungryhouse/ADVENT2015/index.html",
+		"/Applications/MAMP/htdocs/hhblog/wp-content/themes/hhblog-theme/gonzo/templates/advent2015-header.php",
+		"/Applications/MAMP/htdocs/og/og.sublime-project",
+		"/Applications/MAMP/htdocs/og/index.html",
+		"/Applications/MAMP/htdocs/og/css/main.scss",
+		"/Users/jamesshaw/Desktop/testi.html",
+		"/Users/jamesshaw/Desktop/test.svg",
+		"/Users/jamesshaw/Desktop/dates.html",
+		"/Users/jamesshaw/Desktop/test.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/css/main.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/page-post.html",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/41E444D9-DFA6-4991-99A0-69B7053D8E20/index.html",
+		"/Users/jamesshaw/Documents/dh-docs/foodfinder/index.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/css/nav.css",
+		"/Users/jamesshaw/Documents/dh-docs/hungryhouse/untitled folder/index.html",
+		"/Users/jamesshaw/Downloads/delihero-kitchen-sink-249dc77d1b1f 2/css/app.scss",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/images/icon-sprite.svg",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/elements/fade-in.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/elements/hover-links.html",
+		"/Users/jamesshaw/Downloads/Hover-master/scss/hover.scss",
+		"/Users/jamesshaw/Desktop/presse.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/js/classie.js",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/cam2015.sublime-project",
+		"/Applications/MAMP/htdocs/wpcomms/wp-content/themes/dhcomm2/filter-cat-select.php",
+		"/Applications/MAMP/htdocs/wpcomms/wp-content/themes/dhcomm2/filter-market-select.php",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/parts/form.html",
+		"/Users/jamesshaw/Desktop/section-cards.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/css/nav.scss",
+		"/Users/jamesshaw/Downloads/Material-Menu-master/index.html",
+		"/Users/jamesshaw/Downloads/Material-Menu-master/_sass/sass/modules/_menu.scss",
+		"/Users/jamesshaw/Desktop/INDEXY.HTML",
+		"/Users/jamesshaw/Desktop/2214.html",
+		"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/css/main.css",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/D3F8D371-9914-43B9-AACA-70B568C543A6/header-blank.php",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/EAB9A51F-D088-4289-97D5-AA21144B6F21/header-curry.php",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/378C2693-A977-4190-A3D4-7A8F67A611CA/header.php",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/B18F3DC7-69AE-42E2-A653-70E5A00767FC/header-tt.php",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/B7C45F6B-C3E5-48F2-A726-60EE0D7731C7/header-lp.php",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/64D2D42C-72BB-4059-BBC7-2DE6BB901C7B/index.html",
+		"/Users/jamesshaw/Library/Caches/Cleanup At Startup/Transmit/1DC00A40-6D50-42C1-98C0-C537E4F07EF0/header-options.php",
+		"/Users/jamesshaw/Downloads/css-dropdown/css-dropdown_final/style.css",
+		"/Applications/MAMP/htdocs/hhblog-peckish/bare-html/arrow-boxes.html",
+		"/Applications/MAMP/htdocs/hhblog-peckish/bare-html/sass/main.scss",
+		"/Applications/MAMP/htdocs/hhblog-peckish/bare-html/sass/_nav.scss",
+		"/Applications/MAMP/htdocs/hhblog-peckish/bare-html/sass/_cta.scss",
+		"/Applications/MAMP/htdocs/camsite/wp-config-sample.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"show",
+			"post__feat-img",
+			"podc",
+			"ul.covers",
+			"ul.cover-list",
+			".podcast-covers",
+			"podca",
+			"underline",
+			"coral",
+			"radio-list",
+			"hidden",
+			"fade",
+			"ease",
+			"transpa",
+			"animatedBackground",
+			"transp",
+			"trans",
+			"color-wrap",
+			"wrap-top-feat",
+			"wrap",
+			"trans",
+			"post__excerpt--side-titles",
+			"post-feat-img",
+			"side-titles",
+			"side",
+			"post__large--img-bg",
+			"post-excerpt",
+			"post--large-img-bg",
+			"post--large-feat",
+			"featured-img-bg",
+			"post__large--feat",
+			"post-large-feat",
+			"main",
+			"show",
+			"under",
+			"unders",
+			"covers",
+			"meta",
+			"intro",
+			"top-",
+			"header",
+			"color-wrap-coral",
+			"$font-serif",
+			"$font-sans-serif",
+			"$coral",
+			"$rail-blue",
+			"$color__railred-darker",
+			"$rail-red",
+			"$color__black-80percent",
+			"$black",
+			"$background-color",
+			"@import",
+			"impor",
+			"hover",
+			"day8",
+			"day7",
+			"day6",
+			"day5",
+			"day4",
+			"day22",
+			"day21",
+			"day20",
+			"day19",
+			"day18",
+			"day17",
+			"day16",
+			"day15",
+			"day14http://hungryhouse.co.uk/wp-content/themes/hhblog-theme/gonzo/images/advent2015/bg/p4.jpg",
+			"day14",
+			"day13",
+			"day12",
+			"day11",
+			"day10",
+			"day3",
+			"door",
+			"day1",
+			"day1	",
+			"day1",
+			"=\"';\n",
+			"day1",
+			"day2",
+			"header",
+			"day1",
+			"1",
+			"first",
+			"og:",
+			"cat",
+			"day2",
+			"19",
+			"24",
+			"footer",
+			"conten",
+			"purple",
+			"social",
+			"<div class=\"column\">\n<div class=\"column\">\n<div class=\"column\">",
+			"colum",
+			"social",
+			"arr",
+			"main",
+			"soc",
+			"23",
+			"jumbo",
+			"33",
+			"soc",
+			"socia",
+			"tra",
+			".title",
+			"social",
+			"../",
+			"font-",
+			"ranch",
+			"ran",
+			"span",
+			"box",
+			"trans",
+			"title",
+			"conta",
+			"span",
+			"opa",
+			"cal-",
+			"header",
+			"button",
+			"door",
+			"float",
+			"container",
+			"margin:0",
+			"1400px",
+			"back"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".podcast-covers",
+			"cover-list",
+			"zoomBackground",
+			"post__large",
+			"side-titles",
+			"post__feat-img",
+			"post__excerpt--side-titles",
+			"post__large--feat-img",
+			"post__excerpt",
+			"post__large--img-bg",
+			"post__large--feat",
+			"post--large-img-bg",
+			"post--large-feat",
+			"post__large--feat",
+			"color-wrap--coral",
+			"$font__serif",
+			"$font__sans-serif",
+			"$color__coral",
+			"$color__railblue",
+			"$color__railred--dark",
+			"$color__railred",
+			"$color__black--80",
+			"$color__black",
+			"$color__background",
+			"../../",
+			"http://ohgoshcreative.com/demo/hhcal/img/",
+			"royal-blue"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/releases.html",
+					"settings":
+					{
+						"buffer_size": 7381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2044,
+								2044
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 490.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "modules/_typography.scss",
+					"settings":
+					{
+						"buffer_size": 2320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1563,
+								1563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "screen.scss",
+					"settings":
+					{
+						"buffer_size": 12138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6992,
+								6992
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5367.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_base.scss",
+					"settings":
+					{
+						"buffer_size": 924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								592,
+								592
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/static/index.html",
+					"settings":
+					{
+						"buffer_size": 8243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1888,
+								1888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Applications/MAMP/htdocs/cam2015/cambrianlinetheme/barehtml/cam2015.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 144.0,
+	"status_bar_visible": true
+}
