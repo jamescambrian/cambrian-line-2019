@@ -72,7 +72,7 @@ function get_excerpt($count){
   $excerpt = get_the_content();
   $excerpt = strip_tags($excerpt);
   $excerpt = substr($excerpt, 0, $count);
-  $excerpt = $excerpt.'....';
+  $excerpt = $excerpt.'...';
   return $excerpt;
 }
 
@@ -206,17 +206,6 @@ function mixcloud_meta_box_save( $post_id )
  
 
 
-
-
-
-add_filter('single_template', create_function(
-	'$the_template',
-	'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
-		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
-	return $the_template;' )
-);
- 
 
 
 

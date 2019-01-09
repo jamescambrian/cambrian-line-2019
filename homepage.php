@@ -31,7 +31,7 @@ while($catquery->have_posts()) : $catquery->the_post();
     <div class="post__large--excerpt">
         
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <?php the_excerpt(); ?>
+      <?php echo get_excerpt('200') ?><br><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -81,7 +81,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="post__large--feat">
     <div class="post__large--excerpt">
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <?php the_excerpt(); ?>
+      <?php echo get_excerpt('200') ?><br><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -95,7 +95,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
 
-<a class="mobile-nav" href="<?php echo site_url(); ?>/category/mixtapes/">See All Mixtapes</a>
+
 <!-- Featured Post ends -->
 <!-- Radio Section Begins -->
  <div class="color-wrap color-wrap--yellow">
@@ -104,13 +104,13 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="row cover-list">
     <ul class="podcast-covers">
       <?php
-      $catquery = new WP_Query( 'category_name=tune-of-the-day&posts_per_page=3' );
+      $catquery = new WP_Query( 'category_name=blog&posts_per_page=9' );
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
       <li class="one-third column article fade-in-element">
-          <?php the_category(', '); ?>:<br><br>
+          <?php the_category(' / '); ?>:<br><br>
            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php the_excerpt('2'); ?>
+          <?php echo get_excerpt('200') ?>
       <a class="link" href="<?php the_permalink(); ?> ">read more</a>
       </li>
      <?php endwhile; ?>
@@ -120,9 +120,9 @@ while($catquery->have_posts()) : $catquery->the_post();
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
       <li class="one-third column article fade-in-element">
-           <?php the_category(', '); ?>:<br><br>
+           <?php the_category(' / '); ?>:<br><br>
            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php the_excerpt('2'); ?>
+          <?php echo get_excerpt('200') ?>
       <a class="link" href="<?php the_permalink(); ?> ">read more</a>
       </li>
      <?php endwhile; ?>
@@ -135,7 +135,7 @@ while($catquery->have_posts()) : $catquery->the_post();
       <li class="one-third column article fade-in-element">
            <?php the_category(', '); ?>:<br><br>
            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php the_excerpt('2'); ?>
+          <?php echo get_excerpt('200') ?>
       <a class="link" href="<?php the_permalink(); ?> ">read more</a>
       </li>
      <?php endwhile; ?>

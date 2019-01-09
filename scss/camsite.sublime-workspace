@@ -13,7 +13,7 @@
 			],
 			[
 				"co",
-				"color__railred"
+				"color__highlight"
 			],
 			[
 				"ma",
@@ -441,7 +441,7 @@
 			"$font-sans-serif",
 			"$coral",
 			"$rail-blue",
-			"$color__railred-darker",
+			"$color__highlight-darker",
 			"$rail-red",
 			"$color__black-80percent",
 			"$black",
@@ -549,8 +549,8 @@
 			"$font__sans-serif",
 			"$color__coral",
 			"$color__railblue",
-			"$color__railred--dark",
-			"$color__railred",
+			"$color__highlight--dark",
+			"$color__highlight",
 			"$color__black--80",
 			"$color__black",
 			"$color__background",

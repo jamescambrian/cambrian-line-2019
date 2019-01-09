@@ -23,6 +23,9 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h6 { font-size: 1.5rem; }
 }
 
+
+  
+
 p {
     margin-top: 0;
     color: $color__black;
@@ -37,7 +40,7 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color:$color__railred;
+  color:$color__highlight;
   @include fade(0.5s);
   cursor: pointer;
   text-decoration: none;
@@ -79,3 +82,8 @@ a {
       transform:scaleX(0);
     }
   }
+
+
+a h1 ,a h2,a h3,a h4,a h5,a h6{
+    color: $color__black;
+}

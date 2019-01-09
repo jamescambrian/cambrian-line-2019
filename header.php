@@ -34,12 +34,13 @@
 <header id="header" class="header">
     <a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
         <div class="menu desktop"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
-
+    <?php get_search_form(); ?>
 </header>
 <?php } else { ?>
 <header id="header-small" class="smaller">
     <a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
         <div class="menu desktop"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
+    <?php get_search_form(); ?>
 </header>
 <?php } ?>
     
