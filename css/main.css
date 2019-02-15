@@ -1297,10 +1297,13 @@ header.smaller {
 
 .color-wrap--yellow {
   background-color: #ffd750; }
+  .color-wrap--yellow img {
+    mix-blend-mode: multiply;
+    filter: grayscale(100%); }
   .color-wrap--yellow .article {
     border-top: 1px solid #231f20;
     position: relative;
-    height: 380px;
+    height: 640px;
     padding-top: 1rem;
     padding-bottom: 1rem; }
     .color-wrap--yellow .article .link {

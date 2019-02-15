@@ -31,7 +31,7 @@ while($catquery->have_posts()) : $catquery->the_post();
     <div class="post__large--excerpt">
         
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <?php echo get_excerpt('200') ?><br><br>
+      <p><?php echo get_excerpt('200') ?></p><br><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -81,7 +81,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="post__large--feat">
     <div class="post__large--excerpt">
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <?php echo get_excerpt('200') ?><br><br>
+      <p><?php echo get_excerpt('200') ?></p><br><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -101,45 +101,27 @@ while($catquery->have_posts()) : $catquery->the_post();
  <div class="color-wrap color-wrap--yellow">
   <div class="container">
       <span class="home__cat__title">BLOG</span> 
-  <div class="row cover-list">
+  <div class="row">
     <ul class="podcast-covers">
       <?php
-      $catquery = new WP_Query( 'category_name=blog&posts_per_page=9' );
+      $catquery = new WP_Query( 'category_name=blog&posts_per_page=12' );
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
       <li class="one-third column article fade-in-element">
-          <?php the_category(' / '); ?>:<br><br>
+          
+          <?php the_category(' / '); ?>:<br>
            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php echo get_excerpt('200') ?>
-      <a class="link" href="<?php the_permalink(); ?> ">read more</a>
-      </li>
-     <?php endwhile; ?>
-     <?php wp_reset_query(); ?>
-        <?php
-      $catquery = new WP_Query( 'category_name=reviews&posts_per_page=3' );
-      while($catquery->have_posts()) : $catquery->the_post();
-      ?>
-      <li class="one-third column article fade-in-element">
-           <?php the_category(' / '); ?>:<br><br>
-           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <figure>
+                        <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?>
+                        <figcaption>
+                        </figcaption>
+                    </figure>
           <?php echo get_excerpt('200') ?>
       <a class="link" href="<?php the_permalink(); ?> ">read more</a>
       </li>
      <?php endwhile; ?>
      <?php wp_reset_query(); ?>
         
-        <?php
-      $catquery = new WP_Query( 'category_name=rndm&posts_per_page=3' );
-      while($catquery->have_posts()) : $catquery->the_post();
-      ?>
-      <li class="one-third column article fade-in-element">
-           <?php the_category(', '); ?>:<br><br>
-           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php echo get_excerpt('200') ?>
-      <a class="link" href="<?php the_permalink(); ?> ">read more</a>
-      </li>
-     <?php endwhile; ?>
-     <?php wp_reset_query(); ?>
         
     </ul>
   </div>
