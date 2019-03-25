@@ -107,17 +107,20 @@ while($catquery->have_posts()) : $catquery->the_post();
       $catquery = new WP_Query( 'category_name=blog&posts_per_page=12' );
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
-      <li class="one-third column article fade-in-element">
+      <li class="one-third column article">
           
-          <?php the_category(' / '); ?>:<br>
-           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          
+           
           <figure>
                         <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?>
-                        <figcaption>
+                        <figcaption><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            
                         </figcaption>
+              <footer><?php the_category(' / '); ?>:</footer>
                     </figure>
-          <?php echo get_excerpt('200') ?>
-      <a class="link" href="<?php the_permalink(); ?> ">read more</a>
+<!--          <p><?php echo get_excerpt('150') ?></p>-->
+          
+<!--      <a class="link" href="<?php the_permalink(); ?> ">read more</a>-->
       </li>
      <?php endwhile; ?>
      <?php wp_reset_query(); ?>

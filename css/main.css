@@ -92,7 +92,7 @@ ol ul {
 li {
   margin-bottom: 0.75rem;
   font-family: "lato", sans-serif;
-  font-weight: 200; }
+  font-weight: normal; }
 
 /* CODE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -300,7 +300,8 @@ p {
   margin-top: 0;
   color: #231f20;
   font-family: "lato", sans-serif;
-  letter-spacing: 0.01rem; }
+  letter-spacing: 0.01rem;
+  font-weight: normal; }
   @media (min-width: 320px) {
     p {
       font-size: 1.65rem; } }
@@ -1300,10 +1301,14 @@ header.smaller {
   .color-wrap--yellow img {
     mix-blend-mode: multiply;
     filter: grayscale(100%); }
+  .color-wrap--yellow p {
+    font-size: 1.5rem; }
+  .color-wrap--yellow h2 {
+    font-size: 1.8rem; }
   .color-wrap--yellow .article {
     border-top: 1px solid #231f20;
     position: relative;
-    height: 640px;
+    height: 450px;
     padding-top: 1rem;
     padding-bottom: 1rem; }
     .color-wrap--yellow .article .link {
@@ -1313,6 +1318,9 @@ header.smaller {
       position: absolute;
       bottom: 0;
       right: 0; }
+  .color-wrap--yellow footer {
+    font-size: 1.2rem;
+    font-weight: normal; }
   .color-wrap--yellow a {
     color: #231f20; }
   .color-wrap--yellow .showtitle {
@@ -1628,7 +1636,7 @@ ul.podcast-covers {
       height: 250px; } }
   @media (min-width: 750px) {
     .post__feat-img {
-      height: 500px; } }
+      height: 300px; } }
 
 .post__bandcamp-player {
   border: 0;

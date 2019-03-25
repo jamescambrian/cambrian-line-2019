@@ -34,6 +34,7 @@ p {
     @media (#{$bp-larger-than-mobile}) {font-size: 1.65rem;}
     @media (#{$bp-larger-than-tablet}) {font-size: 1.65rem;}
     @media (#{$bp-larger-than-desktophd}) {font-size: 1.65rem;}
+    font-weight:normal;
 }
 
 
