@@ -545,7 +545,7 @@
 			"post--large-feat",
 			"post__large--feat",
 			"color-wrap--coral",
-			"$font__serif",
+			"$font__paragraph",
 			"$font__sans-serif",
 			"$color__coral",
 			"$color__railblue",

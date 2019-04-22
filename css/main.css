@@ -61,7 +61,7 @@ body {
   font-size: 1.5em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-family: "Noto Serif", serif;
+  font-family: "lato", serif;
   color: #231f20;
   background: #fffef9;
   margin: 0;
@@ -91,7 +91,7 @@ ol ul {
 
 li {
   margin-bottom: 0.75rem;
-  font-family: "lato", sans-serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal; }
 
 /* CODE
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 600;
-  font-family: "Noto Serif", serif; }
+  font-family: "lato", serif; }
 
 h1 {
   font-size: 4.0rem;
@@ -298,8 +298,8 @@ h6 {
     font-size: 1.5rem; } }
 p {
   margin-top: 0;
-  color: #231f20;
-  font-family: "lato", sans-serif;
+  color: rgba(35, 31, 32, 0.8);
+  font-family: "Noto Serif", serif;
   letter-spacing: 0.01rem;
   font-weight: normal; }
   @media (min-width: 320px) {
@@ -702,7 +702,7 @@ input[type="button"] {
   font-weight: 600 !important;
   line-height: 38px;
   letter-spacing: .1rem;
-  font-family: "lato", sans-serif;
+  font-family: "lato", serif;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -876,7 +876,7 @@ input[type="button"].button-primary:focus {
     font-weight: 600 !important;
     line-height: 38px;
     letter-spacing: .1rem;
-    font-family: "lato", sans-serif;
+    font-family: "lato", serif;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
@@ -1068,7 +1068,7 @@ label > .label-body {
     margin: 0;
     padding: 0; }
     #player__mini--light #player--playlist li {
-      font-family: "Noto Serif", serif;
+      font-family: "lato", serif;
       color: #231f20;
       cursor: pointer;
       font-weight: 400;
@@ -1204,6 +1204,7 @@ header {
         display: none;
         display: inline-block; } }
     header .menu ul li {
+      font-family: "lato", serif;
       display: inline;
       font-size: 1.3rem;
       letter-spacing: 1px;
@@ -1281,14 +1282,14 @@ header.smaller {
     color: #fffef9; }
     .color-wrap .wrap-title h2 {
       font-size: 3rem;
-      font-family: "Noto Serif", serif;
+      font-family: "lato", serif;
       margin-bottom: 0;
       line-height: 0; }
     .color-wrap .wrap-title span {
       opacity: 0.75; }
   .color-wrap .see-more {
     font-size: 1.3rem;
-    font-family: "lato", sans-serif;
+    font-family: "Noto Serif", serif;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     padding-bottom: 0.5rem; }
@@ -1400,21 +1401,21 @@ ul.podcast-covers {
     padding: 2rem 0 0 0;
     box-sizing: border-box;
     font-size: 1.5rem;
-    font-family: "Noto Serif", serif;
+    font-family: "lato", serif;
     font-weight: 600; }
   ul.podcast-covers .showtitle, ul.podcast-covers .showtitle__dj {
     text-align: center;
     width: 100%;
     display: block; }
   ul.podcast-covers .showtitle {
-    font-family: "Noto Serif", serif;
+    font-family: "lato", serif;
     font-weight: 700;
     left: 0;
     letter-spacing: 1.3px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   ul.podcast-covers .showtitle__dj {
-    font-family: "Noto Serif", serif;
+    font-family: "lato", serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
@@ -1459,7 +1460,7 @@ ul.podcast-covers {
       height: 100%; } }
 
 .home__cat__title {
-  font-family: "lato", sans-serif;
+  font-family: "Noto Serif", serif;
   text-transform: uppercase;
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -1482,14 +1483,14 @@ ul.podcast-covers {
       height: 100%; } }
   .post__large--feat-fullscreen h1 {
     position: absolute;
-    background: #231f20;
-    bottom: 2rem;
+    background: #B23AEE;
+    bottom: 10%;
     right: 0rem;
     padding: 2rem;
     font-size: 1.5rem;
     text-align: left;
     color: #fffef9;
-    font-family: "lato", sans-serif; }
+    font-family: "lato", serif; }
     @media (min-width: 320px) {
       .post__large--feat-fullscreen h1 {
         display: none; } }
@@ -1647,7 +1648,7 @@ ul.podcast-covers {
 .post__tags {
   font-size: 1.2rem;
   font-weight: 400;
-  font-family: "Noto Serif", serif;
+  font-family: "lato", serif;
   padding-bottom: 1.8rem; }
   .post__tags a {
     color: rgba(35, 31, 32, 0.8);
@@ -1727,7 +1728,7 @@ footer.foot {
       list-style-type: none;
       margin: 0;
       line-height: 3rem;
-      font-family: "lato", sans-serif;
+      font-family: "Noto Serif", serif;
       box-sizing: border-box; }
       footer.foot ul li a {
         color: #fffef9;
@@ -1743,7 +1744,7 @@ footer.foot {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  font-family: "lato", sans-serif;
+  font-family: "Noto Serif", serif;
   color: #fffef9; }
   @media (min-width: 320px) {
     .mobile-nav {
@@ -2060,7 +2061,7 @@ iframe {
 .chart {
   text-align: center; }
   .chart h5 {
-    font-family: "Noto Serif", serif !important;
+    font-family: "lato", serif !important;
     text-transform: uppercase;
     font-size: 1.5rem; }
   .chart img {
@@ -2142,7 +2143,7 @@ iframe {
     box-shadow: inset 0 -0.08em 0 0 white, inset 0 -0.15em 0 0 #B23AEE;
     text-shadow: -0.08em 0 0 white, 0 -0.08em 0 white, 0.08em 0 0 white, 0 0.08em 0 white; }
   .side-by-side a.link {
-    font-family: "lato", sans-serif !important; }
+    font-family: "Noto Serif", serif !important; }
 
 .searchpage, .blog {
   margin-top: 10rem; }

@@ -85,12 +85,14 @@ header{
         }}
 
     .menu{  
+            
             @media (#{$bp-larger-than-mobile}) {display: none;}
             @media (#{$bp-larger-than-tablet}) {display: none;display: inline-block;}
             position: relative;
             top: -7px;
             left: 1.5rem;
         ul li {
+            font-family: $font__title; 
             display: inline;
             font-size: 1.3rem;
             letter-spacing: 1px;
@@ -215,7 +217,7 @@ header.smaller{
   }
   .see-more{
     font-size:1.3rem;
-    font-family:$font__serif;
+    font-family:$font__paragraph;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     padding-bottom:0.5rem;
@@ -400,7 +402,7 @@ figcaption{position:relative;
 }
 
 .home__cat__title{
-    font-family: $font__serif;
+    font-family: $font__paragraph;
     text-transform: uppercase;
     font-size: 1.3rem;
     margin-bottom: 2rem;
@@ -421,14 +423,14 @@ figcaption{position:relative;
         @media (#{$bp-larger-than-mobile}) {display:none;}
         @media (#{$bp-larger-than-tablet}) {display:block;}
         position:absolute;
-        background:$color__black;
-        bottom: 2rem;
+        background:$color__highlight;
+        bottom: 10%;
         right:0rem;
         padding: 2rem;
         font-size: 1.5rem;
         text-align:left;
         color: $color__background;
-        font-family: $font__serif;
+        font-family: $font__title;
         a{
             
         }
@@ -686,7 +688,7 @@ footer.foot{
       list-style-type: none;
       margin: 0;
       line-height: 3rem;
-      font-family: $font__serif;
+      font-family: $font__paragraph;
       box-sizing:border-box;
       a{
         color: $color__background;
@@ -709,7 +711,7 @@ footer.foot{
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    font-family: $font__serif;
+    font-family: $font__paragraph;
     color:$color__background;
     &:hover{
         color: $color__highlight;
@@ -1134,7 +1136,7 @@ footer.foot{
     box-shadow: inset 0 -0.08em 0 0 white, inset 0 -0.15em 0 0 $color__highlight;
     text-shadow: -0.08em 0 0 white, 0 -0.08em 0 white, 0.08em 0 0 white, 0 0.08em 0 white;
     }
-    a.link{font-family:$font__serif!important; }
+    a.link{font-family:$font__paragraph!important; }
 }
 
 .searchpage, .blog{

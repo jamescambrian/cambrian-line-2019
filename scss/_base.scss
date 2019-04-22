@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Cutive+MonoLora|Noto+Serif|Slabo+27px);
 // global fonts
-$font__sans-serif:'Noto Serif', serif;
-$font__title:'Noto Serif', serif;
-$font__serif:'lato', sans-serif;
+$font__sans-serif:'lato', serif;
+$font__title:'lato', serif;
+$font__paragraph:'Noto Serif', serif;
 
 
 // BREAKPOINTS
@@ -77,7 +77,7 @@ ol ul {
   font-size: 90%;
 }
 li {
-  margin-bottom: 0.75rem;font-family: $font__serif; font-weight:normal; }
+  margin-bottom: 0.75rem;font-family: $font__paragraph; font-weight:normal; }
 
 /* CODE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
