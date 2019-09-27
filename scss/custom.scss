@@ -111,7 +111,7 @@ header{
         ul{
             display: none;
             left: -70px;
-            top: 5px;
+            top: 0px;
             position: absolute;
             min-width: 250px;
             background: $color__black;
@@ -119,6 +119,7 @@ header{
             text-align: left;
             li{
                 display: block;
+                text-transform: capitalize;
                 padding: 0.25rem;
                 font-size: 1.3rem;
                 line-height: 3rem;
@@ -256,12 +257,44 @@ header.smaller{
   }
 }
 
+
+.color-wrap--greyblue{
+  background-color:$color__greyblue;
+    p{font-size: 1.5rem;}
+    h2{font-size: 2rem;}
+    .article{
+        position:relative;
+        height: 520px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .link{text-decoration: underline; text-transform:uppercase; font-size: 1.2rem;position: absolute;bottom: 0;right: 0;}
+    }
+    figcaption{color:$color__black--80;}
+    
+    footer{ 
+    a{color:$color__highlight;}
+    font-size: 1.2rem;font-weight: normal;position: absolute; bottom: 0;
+    }
+    a{color: $color__black;}
+    .showtitle {
+    margin-bottom: 1rem;
+    .link{;
+      &:hover{
+        color:$color__deep-purple--dj;
+      }
+    }
+  }
+    img{@include fade(0.3s);@include brightness(90%);
+        &:hover{box-shadow: 0 0 9px rgba(33,33,33,.5);@include brightness(100%);}
+    }
+}
+
 .color-wrap--railblue{
   background-color:$color__railblue;
 }
 
-.color-wrap--deep-purple{
-  background-color:$color__deep-purple;
+.color-wrap--radiosplash{
+  background-color:$color__highlight;
   .see-more{
     color:$color__deep-purple--seemore;
     border-bottom:1px solid $color__deep-purple;
@@ -310,10 +343,11 @@ header.smaller{
     @media (#{$bp-larger-than-mobile}) {padding:0.5rem;}
     @media (#{$bp-larger-than-tablet}) {padding:0;}
     img{
+      @include brightness(95%);
       @include fade(0.3s);
-      @include brightness(80%);
       &:hover{
-        @include brightness(100%);
+          box-shadow: 0 0 11px rgba(33,33,33,.9);
+        @include brightness(115%);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
@@ -424,7 +458,7 @@ figcaption{position:relative;
         @media (#{$bp-larger-than-tablet}) {display:block;}
         position:absolute;
         background:$color__highlight;
-        bottom: 10%;
+        bottom:0%;
         right:0rem;
         padding: 2rem;
         font-size: 1.5rem;
@@ -544,12 +578,12 @@ figcaption{position:relative;
   }
 
 
-
+    h1{font-size: 4.5rem; padding-bottom:2rem;}
   
   h2{
     @media (#{$bp-larger-than-mobile}) {text-align: center; padding-bottom:1.5rem;}
     @media (#{$bp-larger-than-tablet}) {text-align:left;}
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
   }
 
   h3,h5{
@@ -585,8 +619,8 @@ figcaption{position:relative;
 
 .post__tags{
   font-size: 1.2rem;
-  font-weight: 400;
-  font-family: $font__sans-serif;
+  font-weight: normal;
+  font-family: $font__paragraph;
   padding-bottom: 1.8rem;
     a{
     color:$color__black--80;
@@ -801,10 +835,11 @@ footer.foot{
       @media (#{$bp-larger-than-tablet}) {height: auto;}
     }
     img{
+        transition: box-shadow .3s;
       @include fade(0.3s);
       @include brightness(100%);
       &:hover{
-        @include brightness(80%);}
+        box-shadow: 0 0 11px rgba(33,33,33,.2);}
       
       }
       &--four{
@@ -889,8 +924,7 @@ footer.foot{
 
 
 .mixcloud-embed {
-    margin-top: -4rem;
-    margin-bottom: 4rem;
+        margin: 10px 0;
     iframe{
         width:100%!important;}
     }
@@ -1122,7 +1156,7 @@ footer.foot{
     }
     figure{
         @media (#{$bp-larger-than-mobile}) {max-height: auto;}
-        @media (#{$bp-larger-than-tablet}) {max-height: 455px;}
+        @media (#{$bp-larger-than-tablet}) {max-height: 510px;}
         overflow: hidden;
     }
     figcaption{
@@ -1143,6 +1177,15 @@ footer.foot{
     margin-top: 10rem;
 }
 
+.first{margin-top:12rem;}
+
+.metadata{
+    font-size:1.2rem; color: $color__black;
+    display: inline-block;
+    padding:2rem 0 0 0;
+    font-family: $font__title;
+    a{color:$color__highlight;font-size: normal;}
+}
 //style first post later
 //.blog .side-by-side:first-child{
 //    background: green;

@@ -1,21 +1,44 @@
 <?php get_header(); ?>
-<!-- Featured Post Begins -->
-<section id="content" role="main">
+<!--
+<?php
+$catquery = new WP_Query( 'category_name=rndm&posts_per_page=1' );
+while($catquery->have_posts()) : $catquery->the_post();
+?>
+ Featured Post Begins 
+<div class="post__large fade-in-element">
+  <a href="<?php the_permalink(); ?>">
+    <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+    <div class="post__large--feat-fullscreen post__large--feat-img" style="background:url('<?php echo $featsrc[0]; ?>')"><h1><?php the_title(); ?></h1>
+    </div>
+  </a>
+  <br class="u-cf"/>
+</div>
+<?php endwhile; ?>
+<?php wp_reset_query(); ?>
+-->
+
+
+
+
+
 <?php if ( have_posts() ) : ?>
 
 <div class="container blog">
 <div class="row">
 <?php while ( have_posts() ) : the_post(); ?><div class="four columns side-by-side">
 <figure>
-                        <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?>
+                        <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?><span class="metadata"><?php the_category(' | '); ?></span>
                         <figcaption>
-                           <a href="<?php the_permalink(); ?>"><span><?php the_title('<h2>', '</h2>'); ?></span></a><br><br>
-<p><?php echo get_excerpt('150') ?></p>
+                            
+                           <a href="<?php the_permalink(); ?>"><span><?php the_title('<h2>', '</h2>'); ?>
+                               
+                               </span></a><br><br>
+<p><?php echo get_excerpt('110') ?></p>
                         </figcaption>
                     </figure>
 
     <div class="row">
-        <div class="six columns foot"><a class="link" href="<?php the_permalink(); ?> ">read more</a></div>
+<!--    <div class="six columns foot"><a class="button" href="<?php the_permalink(); ?> ">read more</a></div>-->
         </div>
     </div>
     
@@ -39,6 +62,12 @@
 </article>
 <?php endif; ?></div>
     
-</section>
-</section>
+
+
+
+
+
+
+
+
 <?php get_footer(); ?>

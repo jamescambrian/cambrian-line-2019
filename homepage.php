@@ -6,7 +6,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <div class="post__large fade-in-element">
   <a href="<?php the_permalink(); ?>">
     <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
-    <div class="post__large--feat-fullscreen post__large--feat-img" style="background:url('<?php echo $featsrc[0]; ?>')"><h1><?php the_title(); ?></h1>
+    <div class="post__large--feat-fullscreen post__large--feat-img" style="background:url('<?php echo $featsrc[0]; ?>')">
     </div>
   </a>
   <br class="u-cf"/>
@@ -44,7 +44,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <!-- Radio Section Begins -->
  
 
-<div class="color-wrap color-wrap--deep-purple">
+<div class="color-wrap color-wrap--radiosplash">
     <div class="container">
         <div class="row wrap-title">
             <img class="logo-small" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png">
@@ -98,9 +98,9 @@ while($catquery->have_posts()) : $catquery->the_post();
 
 <!-- Featured Post ends -->
 <!-- Radio Section Begins -->
- <div class="color-wrap color-wrap--yellow">
+ <div class="color-wrap color-wrap--greyblue">
   <div class="container">
-      <span class="home__cat__title">BLOG</span> 
+<!--      <span class="home__cat__title">BLOG</span> -->
   <div class="row">
     <ul class="podcast-covers">
       <?php
@@ -112,16 +112,27 @@ while($catquery->have_posts()) : $catquery->the_post();
           
            
           <figure>
-                        <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?>
-                        <figcaption><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?><span class="metadata"><?php the_category(' | '); ?></span>
+                        <figcaption>
+                            
+                            <h2><a href="<a href="<?php the_permalink() ?>">
+<?php
+$thetitle = $post->post_title; /* or you can use get_the_title() */
+$getlength = strlen($thetitle);
+$thelength = 60;
+echo substr($thetitle, 0, $thelength);
+if ($getlength > $thelength) echo "...";
+?>
+</a></h2>
+                                <p><?php echo get_excerpt('110') ?></p>
                             
                         </figcaption>
-              <footer><?php the_category(' / '); ?>:</footer>
+              <footer></footer>
                     </figure>
-<!--          <p><?php echo get_excerpt('150') ?></p>-->
+
           
-<!--      <a class="link" href="<?php the_permalink(); ?> ">read more</a>-->
-      </li>
+                              
+  
      <?php endwhile; ?>
      <?php wp_reset_query(); ?>
         

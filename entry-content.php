@@ -1,17 +1,18 @@
 <section class="entry-content">
   <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'top-banner', array( 5600,1000 ),  true, '' ); ?>
-  <div class="post__feat-img fade-in-element" style="background:url('<?php echo $featsrc[0]; ?>');"></div>
-    <?php 
-      $trackurl = get_post_meta($post->ID, 'mixcloud_url', true);
-      if ($trackurl) {
-        include 'includes/mixcloud.php';
-      } ?>
-  <div class="container">
-    <div class="twelve columns">
+<!--  <div class="post__feat-img fade-in-element" style="background:url('<?php echo $featsrc[0]; ?>');"></div>-->
+    
+  <div class="container first">
+      
+      
+    <div class="ten columns offset-by-one">
+        <div class="row"><h1><?php the_title(); ?></h1><div/>
     <!-- Shares on Dt -->
     <div class="three columns desktop">
+<!--
         <?php $postfeat = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full-size', array( 1000,1000 ),  true, '' ); ?>
         <img src="<?php echo $postfeat[0]; ?>" class="u-full-width"><br><br>
+-->
         
       <ul class="social-shares">
         <li>
@@ -30,14 +31,21 @@
 <!-- Content section -->
   <div class="nine columns post fade-in-element">
     <div class="row">
-      <h2><?php the_title(); ?></h2>
+        
+<!--      <h2><?php the_title(); ?></h2>-->
+        
       <?php 
       $trackurl = get_post_meta($post->ID, 'camplayer_url', true);
       if ($trackurl) {
         include 'includes/player.php';
       } ?>
-
+      <?php 
+      $trackurl = get_post_meta($post->ID, 'mixcloud_url', true);
+      if ($trackurl) {
+        include 'includes/mixcloud.php';
+      } ?>
       <?php the_content(); ?>
+        
             <?php edit_post_link('edit', '<p>', '</p>'); ?>
         
         <?php next_post_link( $format, $link, $in_same_term = true, $excluded_terms = '', $taxonomy = 'category' ); ?>
