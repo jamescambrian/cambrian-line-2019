@@ -1,0 +1,286 @@
+///////audio
+
+add_action( 'add_meta_boxes', 'camplayer_meta_box_add' );
+function camplayer_meta_box_add()
+{
+    add_meta_box( 'camplayer', 'Cambrian Audio Player', 'camplayer_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function camplayer_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $playertitle = isset( $values['camplayer_title'] ) ? esc_attr( $values['camplayer_title'][0] ) : '';
+    $playerurl = isset( $values['camplayer_url'] ) ? esc_attr( $values['camplayer_url'][0] ) : '';
+
+
+
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'camplayer_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="camplayer_title">Title</label>
+        <input input class="widefat" type="text" name="camplayer_title" id="camplayer_title" value="<?php echo $playertitle; ?>" />
+    </p>
+    <p>
+        <label for="camplayer_url">URL</label>
+        <input input class="widefat" type="text" name="camplayer_url" id="camplayer_url" value="<?php echo $playerurl; ?>" />
+    </p>
+     
+    
+    <?php    
+}
+
+
+add_action( 'save_post', 'camplayer_meta_box_save' );
+function camplayer_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'camplayer_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['camplayer_title'] ) )
+        update_post_meta( $post_id, 'camplayer_title', esc_attr( $_POST['camplayer_title'] ) );
+    if( isset( $_POST['camplayer_url'] ) )
+        update_post_meta( $post_id, 'camplayer_url', esc_attr( $_POST['camplayer_url']) );  
+}
+
+
+//add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
+//add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
+//
+//function posts_link_attributes_1() {
+//    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
+//}
+//function posts_link_attributes_2() {
+//    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
+//}
+
+
+
+
+ 
+
+
+
+///////mixcloud
+
+add_action( 'add_meta_boxes', 'mixcloud_meta_box_add' );
+function mixcloud_meta_box_add()
+{
+    add_meta_box( 'mixcloud', 'Mixcloud Embedder', 'mixcloud_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function mixcloud_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $playerurl = isset( $values['mixcloud_url'] ) ? esc_attr( $values['mixcloud_url'][0] ) : '';
+
+
+
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'mixcloud_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="mixcloud_url">Embed Code</label>
+        <input input class="widefat" type="text" name="mixcloud_url" id="mixcloud_url" value="<?php echo $playerurl; ?>" />
+    </p>
+     
+    
+    <?php    
+}
+
+
+add_action( 'save_post', 'mixcloud_meta_box_save' );
+function mixcloud_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'mixcloud_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['mixcloud_url'] ) )
+        update_post_meta( $post_id, 'mixcloud_url', esc_attr( $_POST['mixcloud_url']) );  
+}
+ 
+
+
+//////youtube embed
+
+add_action( 'add_meta_boxes', 'youtube_meta_box_add' );
+function youtube_meta_box_add()
+{
+    add_meta_box( 'youtube', 'Youtube Embedder', 'youtube_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function youtube_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $playerurl = isset( $values['youtube_url'] ) ? esc_attr( $values['youtube_url'][0] ) : '';
+
+
+
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'youtube_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="youtube_url">Embed Code</label>
+        <input input class="widefat" type="text" name="youtube_url" id="youtube_url" value="<?php echo $playerurl; ?>" />
+    </p>
+     
+    
+    <?php    
+}
+
+
+add_action( 'save_post', 'youtube_meta_box_save' );
+function youtube_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'youtube_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['youtube_url'] ) )
+        update_post_meta( $post_id, 'youtube_url', esc_attr( $_POST['youtube_url']) );  
+}
+
+
+
+
+
+
+
+
+ 
+//////subhead embed
+
+add_action( 'add_meta_boxes', 'subhead_meta_box_add' );
+function subhead_meta_box_add()
+{
+    add_meta_box( 'subhead', 'Subheader', 'subhead_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function subhead_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $subheadurl = isset( $values['subhead_text'] ) ? esc_attr( $values['subhead_text'][0] ) : '';
+
+
+
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'subhead_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="subhead_text">Subheading text</label>
+        <input input class="widefat" type="text" name="subhead_text" id="subhead_text" value="<?php echo $subheadurl; ?>" />
+    </p>
+     
+    
+    <?php    
+}
+
+
+add_action( 'save_post', 'subhead_meta_box_save' );
+function subhead_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'subhead_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['subhead_text'] ) )
+        update_post_meta( $post_id, 'subhead_text', esc_attr( $_POST['subhead_text']) );  
+}
+ 
+
+//////banner embed
+
+add_action( 'add_meta_boxes', 'banner_meta_box_add' );
+function banner_meta_box_add()
+{
+    add_meta_box( 'banner', 'Banner URL', 'banner_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function banner_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $playerurl = isset( $values['banner_url'] ) ? esc_attr( $values['banner_url'][0] ) : '';
+
+
+
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'banner_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="banner_url">Banner URL (min-size 1250x550)</label>
+        <input input class="widefat" type="text" name="banner_url" id="banner_url" value="<?php echo $playerurl; ?>" />
+    </p>
+     
+    
+    <?php    
+}
+
+
+add_action( 'save_post', 'banner_meta_box_save' );
+function banner_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'banner_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['banner_url'] ) )
+        update_post_meta( $post_id, 'banner_url', esc_attr( $_POST['banner_url']) );  
+}
+ 

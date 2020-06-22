@@ -1,5 +1,5 @@
 <?php
-$catquery = new WP_Query( 'category_name=featured&posts_per_page=1' );
+$catquery = new WP_Query( 'category_name=radio&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
 <!-- Featured Post Begins -->
@@ -17,7 +17,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <a class="mobile-nav" href="<?php echo site_url(); ?>/category/releases/">See All Releases</a>
 
 <?php
-$catquery = new WP_Query( 'category_name=clarach-rave-tapes&posts_per_page=1' );
+$catquery = new WP_Query( 'category_name=charts&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
 <!-- Featured Post Begins -->
@@ -29,9 +29,11 @@ while($catquery->have_posts()) : $catquery->the_post();
   </a>
   <div class="post__large--feat">
     <div class="post__large--excerpt">
-        
+       
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <p><?php echo get_excerpt('200') ?></p><br><br>
+         <span class="metadata"><?php the_category(' | '); ?></span>
+        <br>
+      <p><?php echo the_excerpt() ?></p><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -48,10 +50,10 @@ while($catquery->have_posts()) : $catquery->the_post();
     <div class="container">
         <div class="row wrap-title">
             <img class="logo-small" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png">
-            <h2>Radio</h2>
+            <h2>Radio / Mixes</h2>
             <br>
             <span>
-                <a class="see-more" href="<?php echo site_url(); ?>/category/radio/">See all Radio shows</a></span>
+                <a class="see-more" href="<?php echo site_url(); ?>/category/radio/">See all</a></span>
         </div>
         <div class="row cover-list">
             <ul class="podcast-covers">
@@ -73,7 +75,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <br class="u-cf"/>
 <a class="mobile-nav" href="<?php echo site_url(); ?>/category/radio/">See All Radio</a>
 <?php
-$catquery = new WP_Query( 'category_name=cambrian-line-recordings&posts_per_page=1' );
+$catquery = new WP_Query( 'category_name=reviews&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
 <!-- Featured Post Begins -->
@@ -81,7 +83,8 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="post__large--feat">
     <div class="post__large--excerpt">
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
-      <p><?php echo get_excerpt('200') ?></p><br><br>
+        <span class="metadata"><?php the_category(' | '); ?></span>
+      <p><?php echo the_excerpt('200') ?></p><br>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
   </div>
@@ -102,12 +105,12 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="container">
 <!--      <span class="home__cat__title">BLOG</span> -->
   <div class="row">
-    <ul class="podcast-covers">
+    <ul class="">
       <?php
-      $catquery = new WP_Query( 'category_name=blog&posts_per_page=12' );
+      $catquery = new WP_Query( 'category_name=blog&posts_per_page=6' );
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
-      <li class="one-third column article">
+      <li class="one-third column article side-by-side">
           
           
            
@@ -115,7 +118,7 @@ while($catquery->have_posts()) : $catquery->the_post();
                         <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?><span class="metadata"><?php the_category(' | '); ?></span>
                         <figcaption>
                             
-                            <h2><a href="<a href="<?php the_permalink() ?>">
+                            <h2><a href="<?php echo the_permalink() ?>">
 <?php
 $thetitle = $post->post_title; /* or you can use get_the_title() */
 $getlength = strlen($thetitle);
@@ -124,7 +127,7 @@ echo substr($thetitle, 0, $thelength);
 if ($getlength > $thelength) echo "...";
 ?>
 </a></h2>
-                                <p><?php echo get_excerpt('110') ?></p>
+                                <p><?php echo the_excerpt() ?></p>
                             
                         </figcaption>
               <footer></footer>

@@ -76,123 +76,160 @@ function get_excerpt($count){
   return $excerpt;
 }
 
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
 function my_post_image_html( $html, $post_id, $post_image_id ) {
 	$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
 	return $html;
 }
 
-add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
-
-function posts_link_attributes_1() {
-    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
-}
-function posts_link_attributes_2() {
-    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
-}
 
 
-
-///////audio
-
-add_action( 'add_meta_boxes', 'camplayer_meta_box_add' );
-function camplayer_meta_box_add()
-{
-    add_meta_box( 'camplayer', 'Cambrian Audio Player', 'camplayer_meta_box_cb', 'post', 'side', 'high' );
-}
-
-function camplayer_meta_box_cb()
-{
-    // $post is already set, and contains an object: the WordPress post
-    global $post;
-    $values = get_post_custom( $post->ID );
-    $playertitle = isset( $values['camplayer_title'] ) ? esc_attr( $values['camplayer_title'][0] ) : '';
-    $playerurl = isset( $values['camplayer_url'] ) ? esc_attr( $values['camplayer_url'][0] ) : '';
-
-
-
-     
-    // We'll use this nonce field later on when saving.
-    wp_nonce_field( 'camplayer_meta_box_nonce', 'meta_box_nonce' );
-    ?>
-    <p>
-        <label for="camplayer_title">Title</label>
-        <input input class="widefat" type="text" name="camplayer_title" id="camplayer_title" value="<?php echo $playertitle; ?>" />
-    </p>
-    <p>
-        <label for="camplayer_url">URL</label>
-        <input input class="widefat" type="text" name="camplayer_url" id="camplayer_url" value="<?php echo $playerurl; ?>" />
-    </p>
-     
-    
-    <?php    
-}
-
-
-add_action( 'save_post', 'camplayer_meta_box_save' );
-function camplayer_meta_box_save( $post_id )
-{
-    // Bail if we're doing an auto save
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-     
-    // if our nonce isn't there, or we can't verify it, bail
-    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'camplayer_meta_box_nonce' ) ) return;
-     
-    // if our current user can't edit this post, bail
-    if( !current_user_can( 'edit_post', $post_id ) ) return;
-
-    
-
-    // Make sure your data is set before trying to save it
-    if( isset( $_POST['camplayer_title'] ) )
-        update_post_meta( $post_id, 'camplayer_title', esc_attr( $_POST['camplayer_title'] ) );
-    if( isset( $_POST['camplayer_url'] ) )
-        update_post_meta( $post_id, 'camplayer_url', esc_attr( $_POST['camplayer_url']) );  
-}
+//pagination numbers
+function wpbeginner_numeric_posts_nav() {
  
-
-
-
-///////mixcloud
-
-add_action( 'add_meta_boxes', 'mixcloud_meta_box_add' );
-function mixcloud_meta_box_add()
-{
-    add_meta_box( 'mixcloud', 'Mixcloud Embedder', 'mixcloud_meta_box_cb', 'post', 'side', 'high' );
+    if( is_singular() )
+        return;
+ 
+    global $wp_query;
+ 
+    /** Stop execution if there's only 1 page */
+    if( $wp_query->max_num_pages <= 1 )
+        return;
+ 
+    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $max   = intval( $wp_query->max_num_pages );
+ 
+    /** Add current page to the array */
+    if ( $paged >= 1 )
+        $links[] = $paged;
+ 
+    /** Add the pages around the current page to the array */
+    if ( $paged >= 3 ) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+ 
+    if ( ( $paged + 2 ) <= $max ) {
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+ 
+    echo '<div class="number-nav"><ul>' . "\n";
+ 
+    /** Previous Post Link */
+    if ( get_previous_posts_link() )
+        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+ 
+    /** Link to first page, plus ellipses if necessary */
+    if ( ! in_array( 1, $links ) ) {
+        $class = 1 == $paged ? ' class="active"' : '';
+ 
+        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+ 
+        if ( ! in_array( 2, $links ) )
+            echo '<li>…</li>';
+    }
+ 
+    /** Link to current page, plus 2 pages in either direction if necessary */
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+        $class = $paged == $link ? ' class="active"' : '';
+        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+    }
+ 
+    /** Link to last page, plus ellipses if necessary */
+    if ( ! in_array( $max, $links ) ) {
+        if ( ! in_array( $max - 1, $links ) )
+            echo '<li>…</li>' . "\n";
+ 
+        $class = $paged == $max ? ' class="active"' : '';
+        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+    }
+ 
+    /** Next Post Link */
+    if ( get_next_posts_link() )
+        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+ 
+    echo '</ul></div>' . "\n";
+ 
 }
 
-function mixcloud_meta_box_cb()
+
+
+
+//////banner embed
+
+add_action( 'add_meta_boxes', 'banner_meta_box_add' );
+function banner_meta_box_add()
+{
+    add_meta_box( 'banner', 'Xtras', 'banner_meta_box_cb', 'post', 'side', 'high' );
+}
+
+function banner_meta_box_cb()
 {
     // $post is already set, and contains an object: the WordPress post
     global $post;
     $values = get_post_custom( $post->ID );
+    $bannerurl = isset( $values['banner_url'] ) ? esc_attr( $values['banner_url'][0] ) : '';
+    $youtubeurl = isset( $values['youtube_url'] ) ? esc_attr( $values['youtube_url'][0] ) : '';
+    $subhead = isset( $values['subhead'] ) ? esc_attr( $values['subhead'][0] ) : '';
     $playerurl = isset( $values['mixcloud_url'] ) ? esc_attr( $values['mixcloud_url'][0] ) : '';
-
+    $labelname = isset( $values['labelname'] ) ? esc_attr( $values['labelname'][0] ) : '';
+    $releasedate = isset( $values['releasedate'] ) ? esc_attr( $values['releasedate'][0] ) : '';
 
 
      
     // We'll use this nonce field later on when saving.
-    wp_nonce_field( 'mixcloud_meta_box_nonce', 'meta_box_nonce' );
+    wp_nonce_field( 'banner_meta_box_nonce', 'meta_box_nonce' );
     ?>
     <p>
-        <label for="mixcloud_url">Embed Code</label>
+        <label for="banner_url">Banner URL (min-size 1250x550):</label>
+        <input input class="widefat" type="text" name="banner_url" id="banner_url" value="<?php echo $bannerurl; ?>" />
+    </p>
+    <p>
+        <label for="subhead">Subheader:</label>
+        <input input class="widefat" type="text" name="subhead" id="subhead" value="<?php echo $subhead; ?>" />
+    </p>
+    <p>
+        <label for="mixcloud_url">Mixcloud URL:</label>
         <input input class="widefat" type="text" name="mixcloud_url" id="mixcloud_url" value="<?php echo $playerurl; ?>" />
     </p>
-     
+    <p>
+        <label for="youtube_url">Youtube URL:</label>
+        <input input class="widefat" type="text" name="youtube_url" id="youtube_url" value="<?php echo $youtubeurl; ?>" />
+    </p>
+    <p>
+        <label for="labelname">Label Name:</label>
+        <input input class="widefat" type="text" name="labelname" id="labelname" value="<?php echo $labelname; ?>" />
+    </p>
+    <p>
+        <label for="releasedate">Released (DD/MM/YY):</label>
+        <input input class="releasedate" type="text" name="releasedate" id="releasedate" value="<?php echo $releasedate; ?>" />
+    </p>
     
     <?php    
 }
 
 
-add_action( 'save_post', 'mixcloud_meta_box_save' );
-function mixcloud_meta_box_save( $post_id )
+add_action( 'save_post', 'banner_meta_box_save' );
+function banner_meta_box_save( $post_id )
 {
     // Bail if we're doing an auto save
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
      
     // if our nonce isn't there, or we can't verify it, bail
-    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'mixcloud_meta_box_nonce' ) ) return;
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'banner_meta_box_nonce' ) ) return;
      
     // if our current user can't edit this post, bail
     if( !current_user_can( 'edit_post', $post_id ) ) return;
@@ -200,12 +237,22 @@ function mixcloud_meta_box_save( $post_id )
     
 
     // Make sure your data is set before trying to save it
+    if( isset( $_POST['banner_url'] ) )
+        update_post_meta( $post_id, 'banner_url', esc_attr( $_POST['banner_url']) ); 
+    if( isset( $_POST['youtube_url'] ) )
+        update_post_meta( $post_id, 'youtube_url', esc_attr( $_POST['youtube_url']) ); 
+    if( isset( $_POST['subhead'] ) )
+        update_post_meta( $post_id, 'subhead', esc_attr( $_POST['subhead']) ); 
     if( isset( $_POST['mixcloud_url'] ) )
-        update_post_meta( $post_id, 'mixcloud_url', esc_attr( $_POST['mixcloud_url']) );  
+        update_post_meta( $post_id, 'mixcloud_url', esc_attr( $_POST['mixcloud_url']) ); 
+    if( isset( $_POST['labelname'] ) )
+        update_post_meta( $post_id, 'labelname', esc_attr( $_POST['labelname']) ); 
+    if( isset( $_POST['releasedate'] ) )
+        update_post_meta( $post_id, 'releasedate', esc_attr( $_POST['releasedate']) ); 
+    
 }
+
+
+
+
  
-
-
-
-
-

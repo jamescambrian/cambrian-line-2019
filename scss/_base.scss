@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Cutive+MonoLora|Noto+Serif|Slabo+27px|Roboto:700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif|Roboto:700&display=swap);
 // global fonts
 $font__sans-serif:'roboto', sans-serif;
 $font__title:'roboto', sans-serif;
-$font__paragraph:'lato', serif;
-
+$font__paragraph:'roboto', sans-serif;
+$font__serif:'Noto Serif', serif;
 
 // BREAKPOINTS
 $bp-larger-than-mobile    : "min-width: 320px";
@@ -50,6 +50,8 @@ html {
     
 }
 body {
+  @media (#{$bp-larger-than-mobile}) {width:105.5%}
+  @media (#{$bp-larger-than-tablet}) {width:100%}
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-family: $font__sans-serif;
